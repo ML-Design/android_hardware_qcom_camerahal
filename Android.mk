@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-LIBCAMERA_BUILD := nexus
+LIBCAMERA_BUILD := p500
 include $(call all-subdir-makefiles)
 
 include $(CLEAR_VARS)
@@ -12,7 +12,7 @@ LOCAL_PRELINK_MODULE := false
 CAMERA_LIB           := camera-inc
 
 ifeq ($(LIBCAMERA_BUILD),nexus)
-CAMERA_LIB := camera-nexus
+CAMERA_LIB := camera-p500
 endif
 
 TARGET_GLOBAL_LD_DIRS  += -L$(LOCAL_PATH) -l${CAMERA_LIB}
